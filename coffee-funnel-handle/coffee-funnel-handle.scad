@@ -1,27 +1,45 @@
 // A handle for the coffee funnel of Bialetti Moka Express pots
 //
-// SPDX-FileCopyrightText: 2020 Georg Gadinger <nilsding@nilsding.org>
+// SPDX-FileCopyrightText: 2020, 2022 Georg Gadinger <nilsding@nilsding.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
-od = 70; // outer diameter
-id = 64; // inner diameter
-hh = 20; // holder height
+/* [General] */
 
-hl = 100; // handle length
-hw = 25; // handle width
-hr = 5;  // handle roundness
+// size of your moka pot.  select "custom" to use a custom size instead
+variant = "6 cups"; // ["4 cups", "6 cups", "custom"]
+
+/* [Handle] */
+
+handle_height = 20;
+handle_length = 100;
+handle_width = 25;
+handle_roundness = 5; // [0:9]
+
+/* [Custom] */
+
+// diameter of the funnel measured from the top (in mm)
+custom_diameter = 65;
+
+/* [Hidden] */
+
+diameter = (variant == "4 cups") ? 59
+  : (variant == "6 cups") ? 65
+  : custom_diameter;
+
+outer_diameter = diameter + 5;
+inner_diameter = diameter - 1;
 
 $fn = 85;
 
 module holder() {
-  cylinder(hh, d = od);
+  cylinder(handle_height, d = outer_diameter);
 }
 
 module handle() {
-  translate([od / 2 - (od - id) / 2 - hr, -(hw / 2) + hr, hr])
+  translate([outer_diameter / 2 - (outer_diameter - inner_diameter) / 2 - handle_roundness, -(handle_width / 2) + handle_roundness, handle_roundness])
   minkowski() {
-    cube([hl - hr * 2, hw - hr * 2, hh - hr * 2]);
-    sphere(hr);
+    cube([handle_length - handle_roundness * 2, handle_width - handle_roundness * 2, handle_height - handle_roundness * 2]);
+    sphere(handle_roundness);
   }
 }
 
@@ -31,5 +49,5 @@ difference() {
     holder();
   };
   translate([0, 0, -1])
-  cylinder(hh + 2, d = id);
+  cylinder(handle_height + 2, d = inner_diameter);
 }
