@@ -6,8 +6,8 @@
 $fn = 200;
 
 base_height = 1.5;
-plunger_height = 10;
-plunger_diameter = 6;
+plunger_height = 15;
+plunger_diameter = 7.5;
 
 union() {
   translate([0, 0, base_height])
