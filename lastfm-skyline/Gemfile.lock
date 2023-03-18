@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
+    lastfm (1.27.4)
+      httparty
+      xml-simple
+    mini_mime (1.1.2)
+    multi_xml (0.6.0)
+    rexml (3.2.5)
+    xml-simple (1.1.9)
+      rexml
+
+PLATFORMS
+  arm64-darwin-22
+
+DEPENDENCIES
+  lastfm (~> 1.27)
+
+BUNDLED WITH
+   2.4.7

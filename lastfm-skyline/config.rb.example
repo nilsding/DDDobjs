@@ -1,0 +1,7 @@
+# create an API account at https://www.last.fm/api/account/create
+# or view existing ones at https://www.last.fm/api/accounts
+API_KEY = "changeme"
+API_SECRET = "changeme"
+
+USER_NAME = ENV.fetch("USER_NAME", "nilsding")
+YEAR = ENV.fetch("YEAR", Time.now.utc.year - 1).to_i
