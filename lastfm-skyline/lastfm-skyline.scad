@@ -5,6 +5,12 @@ include <../vendor/BOSL2/std.scad>
 
 include <data.scad>
 
+// Use last.fm logo
+lastfm_logo = true;
+
+// Custom prefix for username (only used without a logo)
+username_prefix = "last.fm/user/";
+
 /* [Hidden] */
 block_width = 2.5;
 
@@ -36,6 +42,20 @@ module skyline() {
   }
 }
 
+module username() {
+  if (lastfm_logo) {
+    fwd(4.5)
+    linear_extrude(1)
+    scale((base_height - 4) / 110)
+    import("lastfm.svg");
+
+    right(13)
+    text3d(data_username, h = 1, size = base_height - 5, anchor = BOTTOM+LEFT);
+  } else {
+    text3d(str_join([username_prefix, data_username]), h = 1, size = base_height - 5, anchor = BOTTOM+LEFT);
+  }
+}
+
 prismoid([base_length_bottom, base_width_bottom], [base_length, base_width], h = base_height) {
   // skyline
   attach(TOP)
@@ -44,10 +64,10 @@ prismoid([base_length_bottom, base_width_bottom], [base_length, base_width], h =
   // username
   left(base_length / 2 - block_width * 2)
   attach(FRONT)
-  text3d(str_join(["last.fm/user/", data_username]), h = 1, size = base_height - 4, anchor = BOTTOM+LEFT);
+  username();
 
   // year
   right(base_length / 2 - block_width * 2)
   attach(FRONT)
-  text3d(data_year, h = 1, size = base_height - 4, anchor = BOTTOM+RIGHT);
+  text3d(data_year, h = 1, size = base_height - 5, anchor = BOTTOM+RIGHT);
 }

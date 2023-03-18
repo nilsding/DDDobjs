@@ -26,4 +26,9 @@ USER_NAME=nilsding ./gen_skyline_data.rb
 USER_NAME=nilsding YEAR=2017 ./gen_skyline_data.rb
 ```
 
+## Credits
+
+The last.fm logo SVG was made by _Font Awesome Free 6.3.0 by @fontawesome_
+(CC-BY-4.0).
+
 [skyline]: https://skyline.github.com
