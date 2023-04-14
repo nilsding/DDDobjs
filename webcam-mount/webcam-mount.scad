@@ -36,7 +36,7 @@ module webcam_mount() {
     rounding = 5,
     edges = [TOP+RIGHT, TOP+LEFT],
     $fn = 100,
-    anchor = BOTTOM+LEFT,
+    anchor = BOTTOM+LEFT
   ) {
     // hole for the screw to mount the webbed cam
     tag("remove")
