@@ -1,0 +1,22 @@
+---
+
+name: Build all objects
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: registry.opensuse.org/opensuse/tumbleweed
+
+    steps:
+      - name: Install dependencies
+        run: |
+          zypper in -y git openscad ruby
+
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Build all objects
+        run: rake
