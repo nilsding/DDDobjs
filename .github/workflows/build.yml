@@ -20,3 +20,10 @@ jobs:
 
       - name: Build all objects
         run: rake
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: objects-stl
+          path: |
+            **/*.stl
