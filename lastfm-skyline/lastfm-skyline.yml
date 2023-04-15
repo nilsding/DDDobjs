@@ -1,0 +1,9 @@
+---
+# variants file for lastfm-skyline.scad
+
+nologo:
+  lastfm_logo: false
+
+custom_username_prefix:
+  lastfm_logo: false
+  username_prefix: "last.fm:"

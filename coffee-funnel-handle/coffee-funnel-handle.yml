@@ -1,0 +1,8 @@
+---
+# variants file for coffee-funnel-handle.scad
+
+6cups:
+  variant: "6 cups"
+
+4cups:
+  variant: "4 cups"
