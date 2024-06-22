@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: 2023 Georg Gadinger <nilsding@nilsding.org>
+# SPDX-FileCopyrightText: 2023 Jyrki Gadinger <nilsding@nilsding.org>
 # SPDX-License-Identifier: AGPL-3.0
 
 require "bundler"

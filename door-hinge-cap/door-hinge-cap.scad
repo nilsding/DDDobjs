@@ -1,6 +1,6 @@
 // A cap for some door hinges.
 //
-// SPDX-FileCopyrightText: 2022 Georg Gadinger <nilsding@nilsding.org>
+// SPDX-FileCopyrightText: 2022 Jyrki Gadinger <nilsding@nilsding.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 /* [General] */

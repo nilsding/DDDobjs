@@ -1,6 +1,6 @@
 // simple squeezing utility for these Hello Fresh sauce packets
 //
-// SPDX-FileCopyrightText: 2023 Georg Gadinger <nilsding@nilsding.org>
+// SPDX-FileCopyrightText: 2023 Jyrki Gadinger <nilsding@nilsding.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 // an usual packet is less than 7cm wide

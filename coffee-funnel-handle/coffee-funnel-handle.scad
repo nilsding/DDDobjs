@@ -1,6 +1,6 @@
 // A handle for the coffee funnel of Bialetti Moka Express pots
 //
-// SPDX-FileCopyrightText: 2020, 2022 Georg Gadinger <nilsding@nilsding.org>
+// SPDX-FileCopyrightText: 2020, 2022 Jyrki Gadinger <nilsding@nilsding.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 /* [General] */

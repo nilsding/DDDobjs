@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2023 Georg Gadinger <nilsding@nilsding.org>
+// SPDX-FileCopyrightText: 2023 Jyrki Gadinger <nilsding@nilsding.org>
 // SPDX-License-Identifier: CC-BY-NC-SA-4.0
 
 include <../vendor/BOSL2/std.scad>

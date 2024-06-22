@@ -1,7 +1,7 @@
 #!/usr/bin/env rake
 # frozen_string_literal: true
 
-# SPDX-FileCopyrightText: 2023 Georg Gadinger <nilsding@nilsding.org>
+# SPDX-FileCopyrightText: 2023 Jyrki Gadinger <nilsding@nilsding.org>
 # SPDX-License-Identifier: MIT
 
 require "yaml"
